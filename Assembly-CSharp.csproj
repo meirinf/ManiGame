@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Orc Warrior\Scripts\Camera.cs" />
      <Compile Include="Assets\Orc Warrior\Scripts\MouseController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

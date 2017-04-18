@@ -79,6 +79,7 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_LINUX
 -define:UNITY_TEAM_LICENSE
+"Assets/Orc Warrior/Scripts/Camera.cs"
 "Assets/Orc Warrior/Scripts/MouseController.cs"
 -r:/opt/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll
 -r:/opt/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll
