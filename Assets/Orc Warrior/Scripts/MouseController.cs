@@ -4,7 +4,7 @@ using System.Collections;
 public class MouseController : MonoBehaviour  {
   public float jumpForce = 15.0f;
   private Rigidbody2D rigidBody;
-  public float runningSpeed =5f;
+  public float runningSpeed = 25f;
   public Animator animator;
   public LayerMask groundLayerMas;
 
