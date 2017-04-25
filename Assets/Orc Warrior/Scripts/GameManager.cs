@@ -12,11 +12,20 @@ public enum GameState{
 public class GameManager : MonoBehaviour {
 
 	public GameState currentGameState = GameState.menu;
+	public static GameManager sharedInstance;
 
+	void Awake(){
+		sharedInstance = this;
+	}
 	void Start(){
-		StartGame();
+		currentGameState = GameState.menu;
 	}
 
+	void Update(){
+		if(Input.GetButtonDown("s")){
+			currentGameState = GameState.inTheGame;
+		}
+	}
 	// Al iniciar el juego
 	public void StartGame () {
 		changeGameState(GameState.inTheGame);

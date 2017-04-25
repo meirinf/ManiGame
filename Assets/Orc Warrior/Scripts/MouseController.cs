@@ -18,14 +18,20 @@ public class MouseController : MonoBehaviour  {
 
 //Carga por cada Frame
 	void Update () {
-    if(Input.GetMouseButtonDown(0)){
-      Jump();
+    
+    if(GameManager.sharedInstance.currentGameState == GameState.inTheGame){
+      if(Input.GetMouseButtonDown(0)){
+        Jump();
+      }
     }
+
   }
 //Tal como esta programado mantiene siempre la misma velocidad y nunca para
   void FixedUpdate(){
+    if(GameManager.sharedInstance.currentGameState == GameState.inTheGame){
     if(rigidBody.velocity.x < runningSpeed){
       rigidBody.velocity = new Vector2(runningSpeed, rigidBody.velocity.y);
+    }
     }
   }
 
