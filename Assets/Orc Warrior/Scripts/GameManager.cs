@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Al iniciar el juego
 	public void StartGame () {
+		MouseController.sharedInstance.StartGame();
 		changeGameState(GameState.inTheGame);
 	}
 
@@ -52,9 +53,8 @@ public class GameManager : MonoBehaviour {
 		}
 		else if(newGameState == GameState.gameOver){
 			//La escena debe mostrar el fin de partida
-
+			changeGameState(GameState.menu);
 		}
 		currentGameState = newGameState;
-
 	}
 }

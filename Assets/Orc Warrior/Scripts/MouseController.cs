@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class MouseController : MonoBehaviour  {
+
+  public static MouseController sharedInstance;
   public float jumpForce = 40.0f;
   private Rigidbody2D rigidBody;
   public float runningSpeed = 25f;
@@ -9,16 +11,21 @@ public class MouseController : MonoBehaviour  {
   public int countJUmps = 0;
   //Esto hay que modificarlo en el Unity
   public LayerMask groundLayerMask;
+  private Vector3 StartPosition;
 
   void Awake(){
+    animator.SetBool("isALive", true);
+    sharedInstance = this;
     rigidBody = GetComponent<Rigidbody2D>();
+    StartPosition = this.transform.position;
   }
-	void Start (){
+	public void StartGame (){
+    this.transform.position = StartPosition;
 	}
 
 //Carga por cada Frame
 	void Update () {
-    
+
     if(GameManager.sharedInstance.currentGameState == GameState.inTheGame){
       if(Input.GetMouseButtonDown(0)){
         Jump();
@@ -59,6 +66,12 @@ public class MouseController : MonoBehaviour  {
         }else{
           return false;
         }
+      }
+
+
+      //El orco muere
+      public void KIllPlayer(){
+        GameManager.sharedInstance.GameOver();
       }
 
   }
