@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MouseController : MonoBehaviour  {
 
@@ -72,6 +73,8 @@ public class MouseController : MonoBehaviour  {
       //El orco muere
       public void KIllPlayer(){
         GameManager.sharedInstance.GameOver();
+        Destroy (GameObject.FindWithTag("Player"));
+        SceneManager.LoadScene("MainScene");
       }
 
   }
