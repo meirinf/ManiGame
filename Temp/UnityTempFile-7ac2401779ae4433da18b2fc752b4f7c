@@ -79,6 +79,7 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_LINUX
 -define:UNITY_TEAM_LICENSE
+"Assets/Orc Warrior/Scripts/BadWeedTrigger.cs"
 "Assets/Orc Warrior/Scripts/Camera.cs"
 "Assets/Orc Warrior/Scripts/GameManager.cs"
 "Assets/Orc Warrior/Scripts/KillTrigger.cs"

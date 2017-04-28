@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Orc Warrior\Scripts\BadWeedTrigger.cs" />
      <Compile Include="Assets\Orc Warrior\Scripts\Camera.cs" />
      <Compile Include="Assets\Orc Warrior\Scripts\GameManager.cs" />
      <Compile Include="Assets\Orc Warrior\Scripts\KillTrigger.cs" />

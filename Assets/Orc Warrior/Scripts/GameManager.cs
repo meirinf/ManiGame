@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 //Es una clase  en la que solo se puede tomar estos valores enumerados
 public enum GameState{
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
 		}
 		else if(newGameState == GameState.gameOver){
 			//La escena debe mostrar el fin de partida
-
+			//SceneManager.LoadScene(escenario);
 		}
 		currentGameState = newGameState;
 	}

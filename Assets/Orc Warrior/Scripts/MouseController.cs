@@ -10,6 +10,7 @@ public class MouseController : MonoBehaviour  {
   public float runningSpeed = 25f;
   public Animator animator;
   public int countJUmps = 0;
+
   //Esto hay que modificarlo en el Unity
   public LayerMask groundLayerMask;
   private Vector3 StartPosition;
@@ -54,7 +55,7 @@ public class MouseController : MonoBehaviour  {
 //Si esta o no en el suelo para que solo salte una vez
       bool IsOnTheFloor(){
         //si esta en el suelo
-        if (Physics2D.Raycast(this.transform.position, Vector2.down, 1.0f, groundLayerMask.value)){
+        if (Physics2D.Raycast(this.transform.position, Vector2.down, 1.5f, groundLayerMask.value)){
           countJUmps =  countJUmps + 1;
           return true;
 
